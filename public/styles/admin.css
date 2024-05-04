@@ -1,0 +1,36 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.reports{
+    width: 100%;
+    flex: 1;
+    background-color: hsl(349, 63%, 75%);
+    overflow-y: auto;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    background-color: #fff;
+    text-align: center;
+}
+
+th{
+    height: 5vh;
+}
+
+td{
+    height: 15vh;
+    overflow-y: auto;
+}
+
+td:hover{
+    background-color: #aaa9a9;
+}

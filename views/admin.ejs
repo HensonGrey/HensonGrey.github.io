@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel = "stylesheet" href = "/styles/nav.css">
+    <link rel = "stylesheet" href = "/styles/admin.css">
+</head>
+<body>
+    <%- include(`./partials/nav.ejs`) %>
+    <% let reportCount = 0; %>
+
+    <div class="reports">
+        <table>
+            <tr>
+                <th style="width: 10%;">#</th>
+                <th style="width: 10%;">Submitted When</th>
+                <th>Content</th>
+            </tr>
+            
+            <% if(reports.length > 0) {%>
+                <% reports.forEach(report => { %>
+                    <tr data-id = "<%= report._id %>">
+                        <td><%= ++reportCount %></td>
+                        <td><%= report.submitTime %></td>
+                        <td><%= report.content %></td>
+                    </tr>
+                    <% }) %>
+                    <% } %>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src = "../js/admin.js"></script>
+</body>
+</html>

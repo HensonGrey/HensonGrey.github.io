@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck Builder</title>
+    <link rel = "stylesheet" href = "/styles/nav.css">
+    <link rel = "stylesheet" href="/styles/index.css">
+</head>
+<body>
+   <div class="container">
+            <!--  NAVBAR  -->
+            <%- include(`./partials/nav.ejs`) %>
+
+        <div class="three-columns">
+            <div class="column-left">
+                <!--  HOVERED CARD INFORMATION  -->
+                <div class = "centered-text">
+                    <h4 class = "card-name" id="card-highlight-name">Card Name</h4>
+                </div>
+
+                <img src = "/images/monster_back.jpg" class = "card-hover-img" id="card-highlight-img" alt="hovered card image">
+
+                <textarea class = "card-effect" id="card-highlight-effect" readonly></textarea>
+            </div>
+            <div class="column-middle">
+                <!--  DECK SECTION  -->
+
+                <div class = "btn-group">
+                    <button id = "sortBtn">SORT</button>
+                    <button id = "clearBtn">CLEAR</button>
+                </div>
+
+                <div class="main-deck-information">
+                    <span>Main Deck:<label id = "main-deck-count">[0]</label></span>
+                    <span id = "main-deck-cost">0$</span>
+
+                    <span>
+                        <img src="/images/monster_back.jpg" class="back-of-card">
+                        <label>[<a>#</a>]</label>
+        
+                        <img src="/images/spell_back.png" class="back-of-card">
+                        <label>[<a>#</a>]</label>
+        
+                        <img src="/images/trap_back.png" class="back-of-card">
+                        <label>[<a>#</a>]</label>                               
+                    </span>
+                </div>
+
+                <table id="main-deck">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <div class="extra-deck-information">
+                    <span >Extra Deck:<label id = "extra-deck-count">[0]</label></span>
+                    <span id = "extra-deck-cost">0$</span>
+
+                    <span>
+                        <img src="/images/fusion_back.png" class="back-of-card">
+                        <label>[<a>#</a>]</label>
+        
+                        <img src="/images/synchro_back.png" class="back-of-card">
+                        <label>[<a>#</a>]</label>
+        
+                        <img src="/images/xyz_back.png" class="back-of-card">
+                        <label>[<a>#</a>]</label>  
+                        
+                        <img src="/images/link_back.png" class="back-of-card">
+                        <label>[<a>#</a>]</label> 
+                    </span>
+                </div>
+
+                <table id="extra-deck">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <!--  SEARCH BAR  -->
+            <div class="column-right">
+                <div class="search-wrapper">
+                    <div class="centered-text-input"><h3 for = "search">Search Cards:</h3></div>
+                    <input type="search" id="search" autocomplete="off" data-search>
+                </div>
+    
+                <div class="user-cards" data-user-cards-container>
+                    <template data-user-template>
+                        <div class="card hide" id = "card-block">
+                            <div style="display: flex;">
+                                <img src="" loading="lazy" card-img>
+                                <span>
+                                    <label card-name></label><br>
+                                    <label card-type></label><br>
+                                    <label card-attributes></label>
+                                </span>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+   </div>
+   <script src="../js/index.js"></script>
+</body>
+</html>

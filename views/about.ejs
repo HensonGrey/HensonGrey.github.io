@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel = "stylesheet" href = "/styles/nav.css">
+    <link rel = "stylesheet" href = "/styles/about.css">
+</head>
+<body>
+    <%- include(`./partials/nav.ejs`) %>
+
+    <div class="info">
+        <p>I am using <a href="https://www.tcgplayer.com/" target="_blank">tcgplayer</a> prices!</p><br>
+        <p>The prices are grabbed off of <a href = "https://ygoprodeck.com/" target="_blank">ygoprodeck's</a> api!</p><br>
+        <p>And as they are not grabbed directly from <a href="https://www.tcgplayer.com/" target="_blank">tcgplayer</a> they are not 100% up-to-date!</p><br>
+        <p>There is nothing I can to about it!</p><br>
+    </div>
+</body>
+</html>

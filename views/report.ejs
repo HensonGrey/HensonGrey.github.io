@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    <link rel = "stylesheet" href = "/styles/nav.css">
+    <link rel = "stylesheet" href = "/styles/report.css">
+</head>
+<body>
+    <%- include(`./partials/nav.ejs`) %>
+
+    <div class="container">
+        <div class="wrapper">
+            <form action="/admin" method="POST">
+                <h2>Enter your complaint</h2><br>
+                <textarea name="content" placeholder="Type something here ..." minlength="16" required></textarea>
+
+                <div class="text-centered">
+                    <button type="submit" class="submitBtn">Submit</button>
+                </div>
+            </form> 
+        </div>    
+    </div>
+
+    <script src="../js/report.js"></script>
+</body>
+</html>

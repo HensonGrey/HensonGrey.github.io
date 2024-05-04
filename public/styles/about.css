@@ -1,0 +1,21 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(349, 63%, 75%);
+}
+
+p{
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}

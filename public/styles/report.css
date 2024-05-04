@@ -1,0 +1,69 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 100%;
+    background-color: hsl(349, 63%, 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.wrapper{
+    width: 470px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px 25px 30px;
+}
+
+.wrapper h2{
+    color: #4671EA;
+    font-size: 28px;
+    text-align: center;
+}
+
+.wrapper textarea{
+    width: 100%;
+    height: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border-color: #bfbfbf;
+    max-height: 330px;
+}
+
+textarea :is(:focus, :valid){
+    border-color: #4671EA;
+    padding: 14px;
+    border-color: #4671EA;
+}
+
+textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+.text-centered{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submitBtn{
+    padding: 0.5rem;
+    background-color: hsl(199, 48%, 54%);
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem ;
+}
+
+.submitBtn:hover{
+    background-color: hsl(199, 48%, 34%);
+    cursor: pointer;
+}
